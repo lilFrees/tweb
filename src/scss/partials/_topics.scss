@@ -22,7 +22,8 @@
 
     &.is-floating {
       --offset: 5.0625rem;
-      --width: calc(var(--left-column-width) - var(--offset));
+      // --width: calc(var(--left-column-width) - var(--offset));
+      --width: calc(100% - var(--offset));
       transform: translateX(calc(var(--width) * var(--reflect)));
       overflow: unset !important;
       position: absolute;
@@ -33,7 +34,7 @@
       pointer-events: all;
       border-inline-start: 1px solid var(--border-color);
     }
-  
+
     &.is-visible {
       &:not(.backwards) {
         transform: translateX(0);
@@ -41,7 +42,7 @@
 
       &.animating {
         transition: transform var(--transition-standard-in);
-  
+
         &.backwards {
           transition: transform var(--transition-standard-out);
         }
@@ -59,11 +60,11 @@
     // }
 
     .sidebar-header {
-      padding: 0 .75rem;
+      padding: 0 0.75rem;
 
       &__title,
       &__subtitle {
-        padding-inline-start: .5rem;
+        padding-inline-start: 0.5rem;
       }
 
       // .btn-icon {
@@ -73,7 +74,7 @@
 
     .chatlist-chat {
       min-height: 4rem;
-      padding-inline-start: .75rem;
+      padding-inline-start: 0.75rem;
     }
   }
 }
@@ -81,7 +82,7 @@
 .topic {
   &-name {
     .topic-icon {
-      margin-inline-end: .25rem;
+      margin-inline-end: 0.25rem;
     }
 
     &-button {
@@ -91,7 +92,7 @@
       align-items: center;
       justify-content: center;
       height: 1.5rem;
-      padding: 0 .5rem;
+      padding: 0 0.5rem;
       color: var(--color);
       font-weight: var(--font-weight-bold);
       position: relative;
@@ -156,23 +157,23 @@
       // fill: url(#topic-icon-gradient);
       // stroke: #000;
     }
-  
+
     // &-gradient {
     //   &-stop-1 {
     //     stop-color: var(--color-top);
     //   }
-  
+
     //   &-stop-2 {
     //     stop-color: var(--color-bottom);
     //   }
     // }
-  
+
     &-content {
       // position: absolute;
       // top: 50%;
       // left: 50%;
       // transform: translate(-50%, -50%);
-  
+
       position: relative;
       // display: inline-block;
       // width: inherit;
@@ -230,7 +231,9 @@
       .topic-icon {
         --size: var(--esg-emoji-size);
         --custom-emoji-size: inherit;
-        margin-inline-start: calc((var(--custom-emoji-size) - var(--esg-emoji-size)) / 2);
+        margin-inline-start: calc(
+          (var(--custom-emoji-size) - var(--esg-emoji-size)) / 2
+        );
       }
     }
   }

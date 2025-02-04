@@ -4,7 +4,7 @@ $border-radius-medium: 10px;
 $border-radius-big: 12px;
 $border-radius-huge: 16px;
 
-$hover-alpha: .08;
+$hover-alpha: 0.08;
 
 //$small-screen: 720px;
 $small-screen: 600px;
@@ -18,10 +18,10 @@ $messages-container-width: 728px;
 
 $chat-input-size: 3.375rem;
 $chat-input-handhelds-size: 2.875rem;
-$chat-padding: .8125rem;
-$chat-padding-handhelds: .5rem;
-$chat-input-inner-padding: .5rem;
-$chat-input-inner-padding-handhelds: .25rem;
-$btn-send-margin: .5rem;
+$chat-padding: 0.8125rem;
+$chat-padding-handhelds: 0.5rem;
+$chat-input-inner-padding: 0.5rem;
+$chat-input-inner-padding-handhelds: 0.25rem;
+$btn-send-margin: 0.5rem;
 
 $use-acceleration: false;

@@ -21,12 +21,11 @@
   html.no-touch &:active {
     @if $property != null {
       @if $use-transition {
-        transition: .2s #{$property};
+        transition: 0.2s #{$property};
       }
-      
+
       #{$property}: $color;
     }
-    
 
     @content;
   }
@@ -49,12 +48,11 @@
   :global(html.no-touch) &:active {
     @if $property != null {
       @if $use-transition {
-        transition: .2s #{$property};
+        transition: 0.2s #{$property};
       }
-      
+
       #{$property}: $color;
     }
-    
 
     @content;
   }
@@ -74,13 +72,13 @@
 
 @mixin btn-hoverable {
   @include hover-background-effect();
-  
-  &.primary, 
-  &.blue, 
+
+  &.primary,
+  &.blue,
   &.active {
     @include hover-background-effect(primary);
   }
-  
+
   &.danger {
     @include hover-background-effect(red);
   }
