@@ -1889,7 +1889,7 @@ export class AppDialogsManager {
       localId: FOLDER_ID_ALL
     });
 
-    const foldersScrollable = new ScrollableX(this.folders.menuScrollContainer);
+    const foldersScrollable = new Scrollable(this.folders.menuScrollContainer);
     bottomPart.prepend(this.folders.menuScrollContainer);
     const selectTab = this.selectTab = horizontalMenu(this.folders.menu, this.folders.container, async(id, tabContent) => {
       /* if(id !== 0) {
@@ -1943,7 +1943,7 @@ export class AppDialogsManager {
           this.xds[folderId].clear();
         }
       }
-    }, undefined, foldersScrollable);
+    }, undefined);
 
     let clickFilterId: number;
     createContextMenu({
@@ -1982,7 +1982,7 @@ export class AppDialogsManager {
         verify: () => clickFilterId !== FOLDER_ID_ALL
       }],
       listenTo: this.folders.menu,
-      findElement: (e) => findUpClassName(e.target, 'menu-horizontal-div-item'),
+      findElement: (e) => findUpClassName(e.target, 'menu-vertical-div-item'),
       onOpen: (e, target) => {
         clickFilterId = +target.dataset.filterId;
       }
@@ -2495,9 +2495,9 @@ export class AppDialogsManager {
     }
 
     const menuTab = document.createElement('div');
-    menuTab.classList.add('menu-horizontal-div-item');
+    menuTab.classList.add('menu-vertical-div-item');
     const span = document.createElement('span');
-    span.classList.add('menu-horizontal-div-item-span');
+    span.classList.add('menu-vertical-div-item-span');
     const titleSpan = document.createElement('span');
     titleSpan.classList.add('text-super');
     if(id === FOLDER_ID_ALL) titleSpan.append(this.allChatsIntlElement.element);
