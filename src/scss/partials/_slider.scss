@@ -29,7 +29,7 @@ $menu-size: 3rem;
 .menu-vertical-scrollable {
   --scrollable-size: 100%;
   height: var(--scrollable-size);
-  width: 70px;
+  width: 56px;
 
   // &:after {
   //   content: " ";
@@ -46,7 +46,7 @@ $menu-size: 3rem;
 .menu-vertical-div {
   // --size: var(--scrollable-size, #{$menu-size});
   --padding-horizontal: 0px;
-  width: 70px;
+  width: 56px;
   height: max-content;
   min-height: 100%;
   background-color: var(--surface-color);
@@ -60,7 +60,7 @@ $menu-size: 3rem;
   color: var(--secondary-text-color);
 
   &-item {
-    height: 70px;
+    height: 56px;
     padding: 0 1rem;
     cursor: pointer;
     text-align: center;
@@ -73,6 +73,7 @@ $menu-size: 3rem;
     justify-content: center;
     line-height: var(--line-height);
     border-radius: 0;
+    overflow: hidden;
 
     @include hover-background-effect();
 
@@ -221,7 +222,6 @@ $menu-size: 3rem;
 }
 
 .tabs-container {
-  min-width: 100%;
   width: 100%;
   display: grid;
   //grid-template-columns: 1fr;
