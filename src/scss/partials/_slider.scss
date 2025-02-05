@@ -29,7 +29,7 @@ $menu-size: 3rem;
 .menu-vertical-scrollable {
   --scrollable-size: 100%;
   height: var(--scrollable-size);
-  width: 56px;
+  width: 60px;
 
   // &:after {
   //   content: " ";
@@ -46,7 +46,7 @@ $menu-size: 3rem;
 .menu-vertical-div {
   // --size: var(--scrollable-size, #{$menu-size});
   --padding-horizontal: 0px;
-  width: 56px;
+  width: 60px;
   height: max-content;
   min-height: 100%;
   background-color: var(--surface-color);
@@ -60,7 +60,7 @@ $menu-size: 3rem;
   color: var(--secondary-text-color);
 
   &-item {
-    height: 56px;
+    height: 60px;
     padding: 0 1rem;
     cursor: pointer;
     text-align: center;
@@ -71,6 +71,7 @@ $menu-size: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     line-height: var(--line-height);
     border-radius: 0;
     overflow: hidden;
@@ -78,10 +79,6 @@ $menu-size: 3rem;
     @include hover-background-effect();
 
     &.active {
-      i {
-        opacity: 0;
-      }
-
       .c-ripple__circle {
         background-color: var(--light-primary-color);
       }
@@ -95,7 +92,8 @@ $menu-size: 3rem;
 
     &-span {
       position: relative;
-      display: inline-flex;
+      display: flex;
+      flex-direction: column;
       align-items: center;
       overflow: visible;
       pointer-events: none;
@@ -103,24 +101,18 @@ $menu-size: 3rem;
     }
   }
 
-  i {
-    position: absolute;
-    bottom: -0.8125rem;
-    left: 0;
-    opacity: 0;
-    background-color: var(--primary-color);
-    height: 0.1875rem;
-    width: 100%;
-    border-radius: 0.1875rem 0.1875rem 0 0;
-    pointer-events: none;
-    /* padding-right: .5rem;
-    margin-left: -.25rem; */
-    box-sizing: content-box;
-    transform-origin: left;
-    z-index: 1;
+  &-icon {
+    position: relative;
+    width: 40px;
+    height: 40px;
 
-    &.animate {
-      transition: transform var(--tabs-transition);
+    background: #000;
+
+    .badge {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: min-content;
     }
   }
 }

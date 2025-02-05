@@ -2500,11 +2500,13 @@ export class AppDialogsManager {
     span.classList.add('menu-vertical-div-item-span');
     const titleSpan = document.createElement('span');
     titleSpan.classList.add('text-super');
+    const iconDiv = document.createElement('div');
+    iconDiv.classList.add('menu-vertical-div-icon');
     if(id === FOLDER_ID_ALL) titleSpan.append(this.allChatsIntlElement.element);
     else setInnerHTML(titleSpan, wrapEmojiText(filter.title));
     const unreadSpan = createBadge('div', 20, 'primary');
-    const i = document.createElement('i');
-    span.append(titleSpan, unreadSpan, i);
+    span.append(iconDiv, titleSpan);
+    iconDiv.append(unreadSpan)
     ripple(menuTab);
     menuTab.append(span);
 
