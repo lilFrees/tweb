@@ -5,6 +5,7 @@
  */
 
 $menu-size: 3rem;
+$sidebar-width: 80px;
 
 .menu-horizontal-scrollable {
   --scrollable-size: #{$menu-size};
@@ -29,7 +30,7 @@ $menu-size: 3rem;
 .menu-vertical-scrollable {
   --scrollable-size: 100%;
   height: var(--scrollable-size);
-  width: 60px;
+  width: $sidebar-width;
 
   // &:after {
   //   content: " ";
@@ -46,7 +47,7 @@ $menu-size: 3rem;
 .menu-vertical-div {
   // --size: var(--scrollable-size, #{$menu-size});
   --padding-horizontal: 0px;
-  width: 60px;
+  width: 80px;
   height: max-content;
   min-height: 100%;
   background-color: var(--surface-color);
@@ -60,7 +61,7 @@ $menu-size: 3rem;
   color: var(--secondary-text-color);
 
   &-item {
-    height: 60px;
+    height: 80px;
     padding: 0 1rem;
     cursor: pointer;
     text-align: center;
@@ -98,6 +99,7 @@ $menu-size: 3rem;
       overflow: visible;
       pointer-events: none;
       white-space: nowrap;
+      gap: 2px;
     }
   }
 
@@ -106,13 +108,15 @@ $menu-size: 3rem;
     width: 40px;
     height: 40px;
 
-    background: #000;
-
     .badge {
       position: absolute;
       top: 0;
       right: 0;
       width: min-content;
+    }
+
+    .tgico {
+      font-size: 25px;
     }
   }
 }

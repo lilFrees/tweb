@@ -114,6 +114,7 @@ import {ChatType} from '../../components/chat/chat';
 import PopupDeleteDialog from '../../components/popups/deleteDialog';
 import rtmpCallsController from '../calls/rtmpCallsController';
 import IS_LIVE_STREAM_SUPPORTED from '../../environment/liveStreamSupport';
+import tgico from '../../helpers/tgico';
 
 export const DIALOG_LIST_ELEMENT_TAG = 'A';
 
@@ -2500,8 +2501,13 @@ export class AppDialogsManager {
     span.classList.add('menu-vertical-div-item-span');
     const titleSpan = document.createElement('span');
     titleSpan.classList.add('text-super');
-    const iconDiv = document.createElement('div');
+    const iconDiv = document.createElement('span');
+    const icon = Icon('chatsplaceholder')
     iconDiv.classList.add('menu-vertical-div-icon');
+    iconDiv.append(icon)
+
+    console.log(this.allChatsIntlElement, 'elements')
+    // iconDiv.innerHTML = icon[1]
     if(id === FOLDER_ID_ALL) titleSpan.append(this.allChatsIntlElement.element);
     else setInnerHTML(titleSpan, wrapEmojiText(filter.title));
     const unreadSpan = createBadge('div', 20, 'primary');
