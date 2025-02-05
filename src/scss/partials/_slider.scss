@@ -47,7 +47,7 @@ $sidebar-width: 80px;
 .menu-vertical-div {
   // --size: var(--scrollable-size, #{$menu-size});
   --padding-horizontal: 0px;
-  width: 80px;
+  width: 5rem;
   height: max-content;
   min-height: 100%;
   background-color: var(--surface-color);
@@ -61,7 +61,7 @@ $sidebar-width: 80px;
   color: var(--secondary-text-color);
 
   &-item {
-    height: 80px;
+    height: 5rem;
     padding: 0 1rem;
     cursor: pointer;
     text-align: center;
@@ -92,7 +92,6 @@ $sidebar-width: 80px;
     }
 
     &-span {
-      position: relative;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -104,14 +103,13 @@ $sidebar-width: 80px;
   }
 
   &-icon {
-    position: relative;
-    width: 40px;
-    height: 40px;
+    width: 2.5rem;
+    height: 2.5rem;
 
     .badge {
       position: absolute;
-      top: 0;
-      right: 0;
+      top: 0.3rem;
+      right: 1.25rem;
       width: min-content;
     }
 
